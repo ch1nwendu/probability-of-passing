@@ -1,0 +1,14 @@
+scores = []
+above_70 = 0
+
+while True:
+    score = input("Enter a score (or enter 'done' to finish): ")
+    if score == 'done':
+        break
+    scores.append(int(score))
+    if int(score) > 70:
+        above_70 += 1
+
+percent_above_70 = above_70 / len(scores) * 100
+
+print("Percent passing is", str(round(percent_above_70)) + "%")
